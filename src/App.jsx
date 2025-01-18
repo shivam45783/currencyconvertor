@@ -25,9 +25,10 @@ function App() {
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+    
       style={{
         backgroundImage: `url(
-          "https://images.pexels.com/photos/7054384/pexels-photo-7054384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          "https://media.istockphoto.com/id/1407983911/photo/forex-diagrams-and-stock-market-rising-lines-with-numbers.jpg?s=612x612&w=0&k=20&c=zas1h6LR6v2iCvE7SWnVoZ_s7ZSiboN45UK0d5oMWac="
         )`,
       }}
     >
@@ -47,7 +48,6 @@ function App() {
                 onCurrencyChange={(currency) => setFrom(currency)}
                 onAmountChange={(amount) => setAmount(amount)}
                 selectedCurrency={from}
-
               />
             </div>
             <div className="relative w-full h-0.5">
@@ -67,9 +67,12 @@ function App() {
                 selectedCurrency={to}
                 amountDisabled={true}
               />
-              <button className="w-auto bg-blue-600 text-white px-4 py-3 rounded-lg"
-              onClick={() => navigator.clipboard.writeText(convertedAmount)}
-              >Copy</button>
+              <button
+                className="w-auto bg-blue-600 text-white px-4 py-3 rounded-lg"
+                onClick={() => navigator.clipboard.writeText(convertedAmount)}
+              >
+                Copy
+              </button>
             </div>
             <button
               type="submit"
