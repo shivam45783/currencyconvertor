@@ -20,12 +20,11 @@ function App() {
   };
 
   const convert = () => {
-    setConvertedAmount((amount * currencyInfo[to]).toFixed(2)); 
+    setConvertedAmount((amount * currencyInfo[to]).toFixed(2));
   };
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
-    
       style={{
         backgroundImage: `url(
           "https://media.istockphoto.com/id/1407983911/photo/forex-diagrams-and-stock-market-rising-lines-with-numbers.jpg?s=612x612&w=0&k=20&c=zas1h6LR6v2iCvE7SWnVoZ_s7ZSiboN45UK0d5oMWac="
@@ -52,7 +51,7 @@ function App() {
             </div>
             <div className="relative w-full h-0.5">
               <button
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5 hover:bg-blue-700"
                 onClick={() => swap()} // or we can write directly {swap}
               >
                 Swap
@@ -68,7 +67,7 @@ function App() {
                 amountDisabled={true}
               />
               <button
-                className="w-auto bg-blue-600 text-white px-4 py-3 rounded-lg"
+                className="w-auto bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700"
                 onClick={() => navigator.clipboard.writeText(convertedAmount)}
               >
                 Copy
@@ -76,7 +75,7 @@ function App() {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
+              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700"
             >
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
